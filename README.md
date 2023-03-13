@@ -15,11 +15,8 @@ Without using this plugin, you will have to manually hide the reference designat
 ## Usage
 
 1. Select the footprints you want to hide the reference designators on. Most often you want to just select everything using Ctrl+A.
-2. Click on the icon in the toolbar:
-
-![Icon](/icon.png)
-
-3. Drink a coffee! You MUST drink a coffee after using this plugin. Else, all the time saved will go to waste.
+2. Click on the icon in the toolbar: ![Icon](/icon.png)
+3. Drink a coffee! You MUST drink a coffee after using this plugin. Without this crucial step, all the time saved will go to waste.
 
 ### Before "Bulk hide Silkscreen Designators"
 
