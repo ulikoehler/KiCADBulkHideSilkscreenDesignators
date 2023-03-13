@@ -1,8 +1,7 @@
 #!/usr/bin/env python
 import pcbnew
-import os
+import os.path
 import wx
-
 
 class BulkHideSilkscreenDesignators(pcbnew.ActionPlugin):
     def defaults(self):
@@ -14,7 +13,6 @@ class BulkHideSilkscreenDesignators(pcbnew.ActionPlugin):
 
     def Run(self):
         # Filter just selected footprints
-        
         selected_footprints: list[pcbnew.FOOTPRINT] = [
             footprint for footprint in pcbnew.GetCurrentSelection()
             if type(footprint).__name__ == 'FOOTPRINT'
@@ -25,6 +23,7 @@ class BulkHideSilkscreenDesignators(pcbnew.ActionPlugin):
             dlg = wx.MessageDialog(None, "Please select one or multiple footprints!\n...or use Ctrl+A to select everything.", "No footprints selected", wx.OK | wx.ICON_ERROR)
             dlg.ShowModal()
             dlg.Destroy()
+            return
 
         for selected_footprint in selected_footprints:
             # Hide reference
